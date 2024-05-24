@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using MySql.Data.Types;
 using System;
+using System.Configuration;
 using System.Data;
 using System.Windows.Forms;
 
@@ -8,7 +9,7 @@ namespace demirbasREMASTERED
 {
     public partial class Donanim : Form
     {
-        string connectionString = "datasource=127.0.0.1; database=demirbasyeni; port = 3306;user=root;";
+        string connectionString = ConfigurationManager.ConnectionStrings["DemirbasDbConnectionString"].ConnectionString;
         private string sicilNumarasi;
 
         public Donanim(string sicilNumarasi)

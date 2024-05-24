@@ -16,7 +16,7 @@ namespace demirbasREMASTERED
     public partial class Genel : Form
     {
 
-        string connectionString = "datasource=127.0.0.1; database=demirbasyeni; port = 3306;user=root;";
+        string connectionString = ConfigurationManager.ConnectionStrings["DemirbasDbConnectionString"].ConnectionString;
         MySqlConnection connection;
         MySqlCommand command;
         MySqlDataReader reader;

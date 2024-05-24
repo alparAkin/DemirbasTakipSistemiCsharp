@@ -18,7 +18,7 @@ namespace demirbasREMASTERED
 {
     public partial class Login : Form
     {
-        string connectionString = "datasource=127.0.0.1; database=demirbasyeni; port = 3306;user=root;";
+        string connectionString = ConfigurationManager.ConnectionStrings["DemirbasDbConnectionString"].ConnectionString;
 
         public Login()
         {
